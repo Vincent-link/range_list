@@ -15,12 +15,11 @@ require './range_list.rb'
 
 rl = RangeList.new
 rl.range_count
-#0
 
 rl.add([1,5])
 
 rl.print
-# "[ 1, 5 ) "
+"[ 1, 5 ) "
 
 rl.add([1,8])
 rl.print
