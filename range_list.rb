@@ -25,13 +25,13 @@ class RangeList
     implements.each_with_index do |implement, index|
       compara_code = compara(range, implement)
       case compara_code
-      when -1
+      when -2
         implements_ranges << implement
         next
       when 0
         update_ranges = create_range_with_index(range, index)
         next
-      when 1
+      when 2
         remain_ranges = implements.delete_at(index)
         break
       end
@@ -57,14 +57,14 @@ class RangeList
     @implements.each_with_index do |implement, index|
       compara_code = compara(range, implement)
       case compara_code
-      when -1
+      when -2
         implements_ranges << implement
         next
       when 0
         results = check_and_create_ranges(implement, range)
         results.each { |result| implements_ranges << result }
         next
-      when 1
+      when 2
         remain_ranges = implements.delete_at(index)
         break
       end
@@ -111,8 +111,8 @@ class RangeList
   end
 
   def compara(range, implement)
-    return 1 if (range.last < implement.first)
-    return -1 if (range.first > implement.last)
+    return 2 if (range.last < implement.first)
+    return -2 if (range.first > implement.last)
     0
   end
 
