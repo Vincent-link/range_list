@@ -27,11 +27,11 @@ rl.print
 
 rl.add([10,20])
 rl.print
-# "[ 1, 8 ) [ 10, 20 ) "
+"[ 1, 8 ) [ 10, 20 ) "
 
 rl.add([20,20])
 rl.print
-# "[ 1, 8 ) [ 10, 20 ) "
+"[ 1, 8 ) [ 10, 20 ) "
 
 rl.remove([10, 11])
 rl.print
@@ -40,7 +40,7 @@ rl.print
 rl.remove([15,17])
 rl.range_size # 3
 rl.print
-# "[ 1, 8 ) [ 11, 15 ) [ 17, 21 ) "
+"[ 1, 8 ) [ 11, 15 ) [ 17, 21 ) "
 
 rl.remove([3,19])
 rl.range_size # 2
