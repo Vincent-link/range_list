@@ -4,6 +4,7 @@
 ### 
 ```shell
 $ git clone git@github.com:Vincent-link/range_list.git
+
 $ cd range-list
 $ ruby test/test.rb
 
